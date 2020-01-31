@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Code</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
+    <link rel="stylesheet" href="css/estil.css">
+    <script src="js/codi.js"></script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="js/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center align-items-center align-content-around">
+        <div id="menu">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="logo" src="img/LOGO.png">
+                </div>
+
+                <div class="row d-flex justify-content-center align-items-center text-menu" onclick="jugar()">
+
+                    <p class="nomMenu">Jugar</p>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center text-menu" onclick="cambiaPagGaleria()">
+                    <p class="nomMenu">Galería</p>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center text-menu" onclick="cambiaPagCreditos()">
+                    <p class="nomMenu">Créditos</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="creditos">
+
+            <div class="container">
+
+                <div class="d-flex justify-content-center align-items-center textCreditos">
+                    <img onclick="paginaBack()" id="back" src="img/back.svg">
+                    <h4>Créditos</h4>
+                </div>
+
+                <div class="row d-flex justify-content-center align-items-center margen">
+                    <p class="nomCredit">Aleksandra Kurland</p>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <p class="nomCredit">Christian Santos</p>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <p class="nomCredit">Anna Martorell</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="galeria">
+        
+        <div class="container">
+            
+            <div class="d-flex justify-content-center align-items-center textGaleria">
+                <img onclick="paginaBack()" id="back" src="img/back.svg">
+                <h4>Galería</h4>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 galeriaCartas">
+                <div class="col d-flex justify-content-center"> <img class="imgCartas" src="img/cartas/cart0.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart1.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart2.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart3.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart4.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart5.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart6.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart7.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart8.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart9.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart10.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart11.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart12.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart13.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart14.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart15.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart16.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart17.svg"></div>
+                <div class="col d-flex justify-content-center"><img class="imgCartas" src="img/cartas/cart18.svg"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JUEGO-->
+    <div id="juego">
+        <div class="apuestaTexto d-flex justify-content-center align-content-center align-items-center" id="apuesta">
+            <h3>Este es un juego de batalla de cartas.<br>Apuesta por el ganador con un click.</h3>
+            <button class="entendido" onclick="desapareixer()">ENTENDIDO</button>
+            <audio id="campana" src="sound/campana-de-box-efecto-de-sonido.mp3"></audio>
+        </div>
+        <main class="d-flex align-items-center">
+            <div class="gif align-items-center justify-content-center" id="gif">
+                <img src="img/boom.gif">
+                <audio id="audio" src="sound/Boom_Swoosh_Sound_Effect.mp3"></audio>
+            </div>
+
+
+            <div class="ladoDer d-flex align-items-center justify-content-center col-6">
+                <div id="carta0" onclick="ganadorRandom('carta0')">
+                    <img id="cart0" src="">
+                    <audio id="audioLoser" src=""></audio>
+                    <audio id="audioWinner" src=""></audio>
+                </div>
+            </div>
+
+            <div class="ladoIzq d-flex align-items-center justify-content-center col-6">
+
+
+                <div id="carta1" onclick="ganadorRandom('carta1')">
+                    <img id="cart1" src="">
+                </div>
+
+            </div>
+            <div class="txt cartaFinal justify-content-center align-content-center align-items-center" id="txt">
+                <h3 id="txtFinal"></h3>
+                <div class="txt d-flex align-items-center justigy-content-center" id="boton">
+                    <a href="">
+                        <p class="volver">VOLVER AL MENÚ</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body></html>
